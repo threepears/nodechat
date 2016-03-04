@@ -28,12 +28,12 @@ app.get("/", (req, res) => {
 // });
 
 db.connect((err) => {
-  if (err) throw err
+  if (err) throw err;
 
   server.listen(PORT, () => {
-    console.log(`Server listening on port: ${PORT}`)
-  })
-})
+    console.log(`Server listening on port: ${PORT}`);
+  });
+});
 
 ws.on("connection", socket => {
   console.log("socket connected");

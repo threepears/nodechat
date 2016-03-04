@@ -3,12 +3,12 @@
 
   const ws = io.connect();
 
-  ws.on("connect", () => {
+  ws.on("connect", (socket) => {
     console.log("socket connected");
   });
 
-  ws.on('receiveChat', msg => {
-    displayChat(msg);
+  ws.on('receiveChat', msgs => {
+    msgs.forEach(displayChat);
   });
 
   const form = document.querySelector('form');
@@ -24,7 +24,7 @@
 
     ws.emit('sendChat', chat);
 
-    displayChat(chat);
+    //displayChat(chat);
 
     text.value = '';
 
