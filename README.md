@@ -24,7 +24,7 @@ Run the following command to install all dependencies:
 $ npm install
 ```
 
-Now start your regular Node server with this Terminal command:
+Now make sure that your PostgreSQL database is up and running; you will have to replace the Postgres information in server.js with your own database info. Then, once this is done, start your regular Node server with this Terminal command:
 
 ```sh
 $ npm run start

@@ -49,7 +49,7 @@ ws.on("connection", socket => {
       [msg.name, msg.text], (err) => {
         if (err) throw err;
 
-        socket.broadcast.emit('receiveChat', [msg]);
+        ws.emit('receiveChat', [msg]);
     });
   });
 });

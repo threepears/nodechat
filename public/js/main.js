@@ -32,11 +32,11 @@
   });
 
   function displayChat (chat) {
-    if (!document.querySelector(`[data-id="${chat._id}"]`)) {
+    // if (!document.querySelector(`[data-id="${chat._id}"]`)) {
       const li = generateLI(chat);
 
       ul.appendChild(li);
-    }
+    // }
   }
 
   function generateLI (chat) {
